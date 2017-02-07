@@ -1,36 +1,40 @@
 {
-  "build": {
+   "build": {
     "content": [
       {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
+        "src": "docs-ref-autogen",
+        "files": [ "*.yml" ],
+        "exclude": [ 
+          "toc.yml" , 
           "**/obj/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE"
-        ]
-      }
-    ],
-    "resource": [
+          ],
+        "dest": "."
+      },
       {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
+        "src": "docs-ref-autogen",
+        "files": [ "toc.yml" ],
+        "dest": "."
+      },
+      {
+        "files": [ "index.md" ],
+        "dest": "."
+      },
+      {
+        "files": [ "breadcrumb/toc.yml" ]
+      },
+      {
+        "files": [ "docs-ref-conceptual/**/*.md" ]
       }
     ],
     "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "davidchesnutDocset0201234535"
+    "globalMetadata": {
+      "breadcrumb_path": "~/breadcrumb/toc.yml"
+    },
+    "dest": "davidchesnutDocset0201234535",
+    "template": [ "docs.html" ]
   }
 }
