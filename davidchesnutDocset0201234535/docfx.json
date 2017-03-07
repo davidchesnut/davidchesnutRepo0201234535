@@ -1,40 +1,36 @@
 {
-   "build": {
+  "build": {
     "content": [
       {
-        "src": "docs-ref-autogen",
-        "files": [ "*.yml" ],
-        "exclude": [ 
-          "toc.yml" , 
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
           "**/obj/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE"
-          ],
-        "dest": "."
-      },
+        ]
+      }
+    ],
+    "resource": [
       {
-        "src": "docs-ref-autogen",
-        "files": [ "toc.yml" ],
-        "dest": "."
-      },
-      {
-        "files": [ "index.md" ],
-        "dest": "."
-      },
-      {
-        "files": [ "breadcrumb/toc.yml" ]
-      },
-      {
-        "files": [ "docs-ref-conceptual/**/*.md" ]
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
       }
     ],
     "overwrite": [],
-    "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/toc.yml"
-    },
-    "dest": "davidchesnutDocset0201234535",
-    "template": [ "docs.html" ]
+    "externalReference": [],
+    "globalMetadata": {},
+    "fileMetadata": {},
+    "template": [],
+    "dest": "sharepoint-test"
   }
 }
